@@ -4,7 +4,7 @@ Thank you for taking the time to conduct the LeasePlan assessment for front-end 
 
 The assessment consists of an assignment, to prepare beforehand and intended to take approximately 3-6 hours, and an in-person discussion of your solution. We view your performance on this assessment as indicative of the work you will deliver as a front-end developer at LeasePlan.
 
-The assignment is the ‘Get a free year of driving promotion’, described below. Read the case carefully, and approach it as you would a regular project. Consider aspects such as robustness, maintainability, testing and user experience. The assignment should be implemented as a single-page application using React and Redux. Any API dependencies can be mocked away. When done, please create a Pull Request on this repository for a code review.
+The assignment is the ‘Get a free year of driving promotion’, described below. Read the case carefully, and approach it as you would a regular project. Consider aspects such as robustness, maintainability, testing and user experience. The assignment should be implemented as a single-page application using React and Redux. Any API dependencies can be mocked away. Please track your progression using Git.
 
 We ask you to treat this assessment as confidential so we can apply the scenarios to future candidates also. Your solution will not be kept after the assessment and will not be used by LeasePlan, but we would appreciate it if you would not place this into the public domain.
 
