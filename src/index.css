@@ -1,5 +1,23 @@
+@font-face {
+  font-family: 'LeasePlan';
+  src: url('assets/fonts/BwModelicaDEMO-Light.woff') format('woff');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'LeasePlan';
+  src: url('assets/fonts/BwModelicaDEMO-Regular.woff') format('woff');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'LeasePlan';
+  src: url('assets/fonts/BwModelicaDEMO-Bold.woff') format('woff');
+  font-weight: 800;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'LeasePlan';
 }
