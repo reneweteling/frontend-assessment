@@ -1,12 +1,16 @@
 # Front-end Developer Assessment
 
-Thank you for taking the time to conduct the LeasePlan assessment for front-end developers. The purpose of which is to give us insight in your technical abilities, development approach and general technical working habits. 
+Thank you for taking the time to conduct the LeasePlan assessment for front-end developers. The purpose of which is to give us insight in your technical abilities, development approach and general technical working habits.
 
-The assessment consists of an assignment, to prepare beforehand and intended to take approximately 3-6 hours, and an in-person discussion of your solution. We view your performance on this assessment as indicative of the work you will deliver as a front-end developer at LeasePlan.
+The assessment consists of an assignment, to prepare beforehand and intended to take approximately 5-8 hours, and an in-person discussion of your solution. We view your performance on this assessment as indicative of the work you will deliver as a front-end developer at LeasePlan.
 
-The assignment is the ‘Get a free year of driving promotion’, described below. Read the case carefully, and approach it as you would a regular project. Consider aspects such as robustness, maintainability, testing and user experience. The assignment should be implemented as a single-page application using React and Redux. Any API dependencies can be mocked away. Please track your progression using Git.
+The assignment is the ‘Get a free year of driving promotion’, described below. Read the case carefully, and approach it as you would a regular project. Consider aspects such as robustness, maintainability, testing and user experience. The assignment should be implemented as a single-page application using React, any API dependencies can be mocked away.
+This repository contains a standard [Create React App](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md) boilerplate to help take away the pain of setting up a working development environment.
 
-We ask you to treat this assessment as confidential so we can apply the scenarios to future candidates also. Your solution will not be kept after the assessment and will not be used by LeasePlan, but we would appreciate it if you would not place this into the public domain.
+You can deliver your work by **creating a fork** on this repo. Please **do not** create a pull request, these can't be deleted.
+
+Your solution will not be kept after the assessment and will not be used by LeasePlan, but we would appreciate it if you would not place this into the public domain.
+We ask you to treat this assessment as confidential so we can apply the scenarios to future candidates also. 
 
 Good luck with the assignment!
 
