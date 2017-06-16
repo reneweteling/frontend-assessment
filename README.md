@@ -42,7 +42,7 @@ The form should consist of:
 * Checkbox agreeing to the use of the e-mail address for marketing purposes
 
 Validation rules:
-* All fields are required, a warning should be shown if left empty on submit
+* All fields are required, a warning should be shown if left empty on blur
 * The firstname field should contain only alphabetic characters and be at least two characters in length
 * The email field should be validated for a valid email address
 * The promotion code should be valid (use the rules from LP-1)
