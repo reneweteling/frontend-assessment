@@ -22,7 +22,7 @@ This assignment is split up into two user-stories.
 The promotion code should be of the following format:
 
 * Nine numerical characters
-* When multiplying the first number by 9, the second by 8, the third by 7, and so on... the resulting number should be divisible by 11 and a single digit may not appear more the twice.
+* When multiplying the first number by 9, the second by 8, the third by 7, and so on... the resulting number should be divisible by 11 and a single digit may not appear more than twice.
 
 Examples:
 * 613884922 is valid, because 6&times;9 + 1&times;8 + 3&times;7 + 8&times;6 + 8&times;5 + 4&times;4 + 9&times;3 + 2&times;2 + 2&times;1 = 220 / 11 = 20 (whole number, no digit is repeated 3+ times)
