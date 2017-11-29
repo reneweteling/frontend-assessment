@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import logo from './assets/images/LEASEPLAN-LOGO@2x.png'
-import './App.scss'
+import './App.css'
 
 class App extends Component {
   render () {
