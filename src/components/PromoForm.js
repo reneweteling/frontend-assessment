@@ -19,12 +19,12 @@ export default class PromoForm extends Component {
     super(props)
     this.state = {
       form: {
-        first_name: 'rene',
-        surname: 'weteling',
-        email: 'rene@weteling.com',
+        first_name: '',
+        surname: '',
+        email: '',
         // phone: '0655128199',
-        promotion: '691610754',
-        privacy: true
+        promotion: '',
+        privacy: false
       },
       error: {}
     }
@@ -113,7 +113,7 @@ export default class PromoForm extends Component {
         {/* <Input {...this.inputSpread('phone')} label={'Phone number'} placeholder={'Enter your phone number'} /> */}
         <Input {...this.inputSpread('promotion')} label={'Promotion code'} placeholder={'Enter your promotion code'} />
         <Input {...this.inputSpread('privacy')} label={'Accept privacy statement'} type='checkbox' />
-        <input type='button' value='Get offer' onClick={this.handleSubmit.bind(this)} />
+        <a className='button-chevron' onClick={this.handleSubmit.bind(this)}>GET OFFER</a>
       </form>
     )
   }

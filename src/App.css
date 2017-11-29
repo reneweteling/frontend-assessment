@@ -73,6 +73,20 @@ body {
     body form .inputGroup .help {
       font-size: 12px;
       color: #e7401e; }
+  body .button-chevron {
+    border-radius: 2rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding: 0.7rem;
+    color: #FFFFFF;
+    background-color: #ED8221;
+    background-image: -webkit-gradient(linear, left top, right top, from(#ED8221), to(#e75d26)); }
+    body .button-chevron:after {
+      margin-left: 0.5rem;
+      content: '\25B6'; }
+    body .button-chevron:hover {
+      background-color: #e75d26;
+      background-image: none; }
   body .row {
     display: flex; }
     body .row .col-50 {
