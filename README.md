@@ -1,3 +1,23 @@
+# Assessment made on 29-11-2017
+The creation of the codes was fairly easy. It took me about 30 min to create the first story. The second story was a bit more complex. Especially the styling. Im a programmer with knowledge of styling. But im not a css master. Mocking the api, checking the validations was pretty mundane stuff. that being said. Ive spent about 2 hours on the second story, so 2,5 hours in total. Its an assessment so.... im guessing you will get gist of my coding skills. 
+
+I did read something about testing in the assessment below, usually we use Capybara to feature test our applications including the frontend. So im not in touch with the JS testing frameworks. Id probably learn it in a couple of hours, they are all similar. So ive skipped that part.
+
+### To create the promo codes
+`npm run promo`
+
+### The way it looks now
+![Preview](http://g.recordit.co/00qCVq1TXJ.gif)
+
+Hope its to your liking, 
+
+All the best,
+
+Rene Weteling
+
+---------------------------------------------------------------
+
+
 # Front-end Developer Assessment
 
 Thank you for taking the time to conduct the LeasePlan assessment for front-end developers. The purpose of which is to give us insight in your technical abilities, development approach and general technical working habits.
