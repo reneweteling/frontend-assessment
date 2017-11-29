@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import * as EmailValidator from 'email-validator'
-import PromoCodes from '../PromoCodes'
+import promoCodes from '../PromoCodes'
 
 const Input = (props) => {
   return (
@@ -8,7 +8,7 @@ const Input = (props) => {
       <label htmlFor={props.name}>{props.label}</label>
       <input type={props.type} placeholder={props.placeholder} value={props.value} onChange={props.handleUpdate} />
       { props.error &&
-        <span class='help'>{props.error}</span>
+        <span className='help'>{props.error}</span>
       }
     </div>
   )
@@ -19,18 +19,14 @@ export default class PromoForm extends Component {
     super(props)
     this.state = {
       form: {
-        first_name: '',
-        surname: '',
-        email: '',
-        phone: '',
-        voucher: '',
-        privacy: false
+        first_name: 'rene',
+        surname: 'weteling',
+        email: 'rene@weteling.com',
+        phone: '0655128199',
+        voucher: '691610754',
+        privacy: true
       },
-      error: {
-        first_name: 'This is a required field',
-        privacy: 'You must accept the terms.',
-        voucher: 'Code not correct, Try again'
-      }
+      error: {}
     }
   }
 
@@ -43,8 +39,9 @@ export default class PromoForm extends Component {
     this.setState(state)
   }
 
-  valdateField (fieldName) {
+  validateField (fieldName) {
     let state = this.state
+    delete state.error[fieldName]
     switch (fieldName) {
       case 'first_name':
       case 'surname':
@@ -59,7 +56,7 @@ export default class PromoForm extends Component {
         }
         break
       case 'voucher':
-        if (PromoCodes.indexOf(state.form.voucher) === -1) {
+        if (promoCodes.indexOf(state.form.voucher) === -1) {
           state.error.voucher = 'Code not correct, Try again.'
         }
         break
@@ -68,15 +65,20 @@ export default class PromoForm extends Component {
           state.error.privacy = 'You must accept the terms.'
         }
         break
-      default:
-        delete state.error[fieldName]
-        break
     }
     this.setState(state)
   }
 
   handleSubmit () {
+    (Object.keys(this.state.form)).forEach(fieldName => {
+      this.validateField(fieldName)
+    })
 
+    if (Object.keys(this.state.error).length === 0) {
+      this.props.handleSubmit(this.state.form)
+    }
+
+    return false
   }
 
   inputSpread (fieldName) {
@@ -90,9 +92,8 @@ export default class PromoForm extends Component {
   }
 
   render () {
-    console.log(this.state.form)
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit.bind(this)}>
         <div className='row'>
           <div className='col-50'>
             <Input {...this.inputSpread('first_name')} label={'First name'} placeholder={'Enter first name'} />
@@ -105,7 +106,7 @@ export default class PromoForm extends Component {
         <Input {...this.inputSpread('phone')} label={'Phone number'} placeholder={'Enter your phone number'} />
         <Input {...this.inputSpread('voucher')} label={'Voucher code'} placeholder={'Enter your voucher code'} />
         <Input {...this.inputSpread('privacy')} label={'Accept privacy statement'} type='checkbox' />
-        <input type='submit' value='Get offer' />
+        <input type='button' value='Get offer' onClick={this.handleSubmit.bind(this)} />
       </form>
     )
   }

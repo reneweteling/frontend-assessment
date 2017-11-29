@@ -9,8 +9,8 @@ class App extends Component {
     return (
       <div className='container'>
         <div className='jumbo-yellow'>
-          <img src={car} className='car' />
-          <img src={logo} className='logo' />
+          <img src={car} className='car' alt='car' />
+          <img src={logo} className='logo' alt='logo' />
           <h1>
             Win een jaar lang
             <br />
@@ -19,7 +19,7 @@ class App extends Component {
             de nieuwe Golf!
           </h1>
           <p>
-            Net binnen: <a href='https://www.volkswagen.nl/modellen/golf' target='_blank'>Volkswagen Golf TDI</a>
+            Net binnen: <a href='https://www.volkswagen.nl/modellen/golf' target='_blank' without='' rel='noopener noreferrer'>Volkswagen Golf TDI</a>
           </p>
         </div>
         <div className='content row'>
@@ -31,9 +31,9 @@ class App extends Component {
           <div className='col-50'>
             <h3>Get a car leasing offer</h3>
             <p>
-              You may request an quote for one or more leasing cars without any obligation. If you are a private person <a href='#'>please use this form.</a>
+              You may request an quote for one or more leasing cars without any obligation. If you are a private person <a>please use this form.</a>
             </p>
-            <PromoForm />
+            <PromoForm handleSubmit={(values) => { console.log(values) }} />
           </div>
         </div>
       </div>
