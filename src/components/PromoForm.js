@@ -6,7 +6,7 @@ const Input = (props) => {
   return (
     <div className={`inputGroup ${props.name} ${props.type} ${props.error ? 'has-error' : ''}`}>
       <label htmlFor={props.name}>{props.label}</label>
-      <input type={props.type} placeholder={props.placeholder} value={props.value} onChange={props.handleUpdate} />
+      <input type={props.type} placeholder={props.placeholder} value={props.value} onChange={props.handleUpdate} onBlur={props.handleBlur} />
       { props.error &&
         <span className='help'>{props.error}</span>
       }
@@ -22,8 +22,8 @@ export default class PromoForm extends Component {
         first_name: 'rene',
         surname: 'weteling',
         email: 'rene@weteling.com',
-        phone: '0655128199',
-        voucher: '691610754',
+        // phone: '0655128199',
+        promotion: '691610754',
         privacy: true
       },
       error: {}
@@ -44,8 +44,14 @@ export default class PromoForm extends Component {
     delete state.error[fieldName]
     switch (fieldName) {
       case 'first_name':
+        if (state.form[fieldName].length < 3) {
+          state.error[fieldName] = 'There should at least be 2 characters'
+        }
+        if (!state.form[fieldName].match(/^[a-z0-9]+$/i)) {
+          state.error[fieldName] = 'You can only use alphanumeric characters'
+        }
+        break
       case 'surname':
-      case 'phone':
         if (state.form[fieldName].length < 3) {
           state.error[fieldName] = 'There should at least be 2 characters'
         }
@@ -55,9 +61,9 @@ export default class PromoForm extends Component {
           state.error.email = 'This is not a valid email address.'
         }
         break
-      case 'voucher':
-        if (promoCodes.indexOf(state.form.voucher) === -1) {
-          state.error.voucher = 'Code not correct, Try again.'
+      case 'promotion':
+        if (promoCodes.indexOf(state.form.promotion) === -1) {
+          state.error.promotion = 'Code not correct, Try again.'
         }
         break
       case 'privacy':
@@ -87,6 +93,7 @@ export default class PromoForm extends Component {
       name: fieldName,
       value: this.state.form[fieldName],
       error: this.state.error[fieldName],
+      handleBlur: this.validateField.bind(this, fieldName),
       handleUpdate: this.handleUpdate.bind(this, fieldName)
     }
   }
@@ -103,8 +110,8 @@ export default class PromoForm extends Component {
           </div>
         </div>
         <Input {...this.inputSpread('email')} label={'E-mail address'} placeholder={'Enter your e-mai address'} type='email' />
-        <Input {...this.inputSpread('phone')} label={'Phone number'} placeholder={'Enter your phone number'} />
-        <Input {...this.inputSpread('voucher')} label={'Voucher code'} placeholder={'Enter your voucher code'} />
+        {/* <Input {...this.inputSpread('phone')} label={'Phone number'} placeholder={'Enter your phone number'} /> */}
+        <Input {...this.inputSpread('promotion')} label={'Promotion code'} placeholder={'Enter your promotion code'} />
         <Input {...this.inputSpread('privacy')} label={'Accept privacy statement'} type='checkbox' />
         <input type='button' value='Get offer' onClick={this.handleSubmit.bind(this)} />
       </form>
