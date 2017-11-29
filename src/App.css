@@ -1,24 +1,93 @@
-.App {
-  text-align: center;
-}
+@font-face {
+  font-family: 'LeasePlan';
+  src: url("assets/fonts/BwModelicaDEMO-Light.woff") format("woff");
+  font-weight: 400; }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
+@font-face {
+  font-family: 'LeasePlan';
+  src: url("assets/fonts/BwModelicaDEMO-Regular.woff") format("woff");
+  font-weight: 600; }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
+@font-face {
+  font-family: 'LeasePlan';
+  src: url("assets/fonts/BwModelicaDEMO-Bold.woff") format("woff");
+  font-weight: 800; }
 
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'LeasePlan'; }
+  body a, body h1, body h3 {
+    color: #e85227; }
+  body .container {
+    width: 960px;
+    margin: auto;
+    padding: 0 5rem; }
+    body .container .jumbo-yellow {
+      margin-top: 80px;
+      background-color: #fdf2e2;
+      padding: 0 3rem;
+      min-height: 380px; }
+      body .container .jumbo-yellow .logo {
+        height: 100px;
+        margin-top: -50px;
+        margin-left: -40px; }
+      body .container .jumbo-yellow h1 {
+        font-size: 37px; }
+      body .container .jumbo-yellow .car {
+        margin: 80px 10px 0 0;
+        width: 500px;
+        float: right; }
+    body .container .content > .col-50 {
+      padding: 3rem; }
+  body form .row .col-50:first-of-type {
+    padding-right: 1rem; }
+  body form .row .col-50:last-of-type {
+    padding-left: 1rem; }
+  body form .inputGroup {
+    margin-bottom: 1rem; }
+    body form .inputGroup.has-error input {
+      border: 1px solid #e7401e;
+      background-color: #fef4f4;
+      color: #e7401e; }
+    body form .inputGroup.checkbox {
+      position: relative; }
+      body form .inputGroup.checkbox label {
+        margin-left: 30px; }
+      body form .inputGroup.checkbox input {
+        position: absolute;
+        top: 0px;
+        left: 0px; }
+    body form .inputGroup label {
+      font-weight: bold;
+      font-size: 14px;
+      display: block;
+      margin-bottom: 0.5rem; }
+    body form .inputGroup input {
+      display: block;
+      width: 100%;
+      border: 1px solid #a0a0a0;
+      background-color: #fbfbfb;
+      color: #a0a0a0;
+      padding: 0.5rem; }
+    body form .inputGroup .help {
+      font-size: 12px;
+      color: #e7401e; }
+  body .button-chevron {
+    border-radius: 2rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding: 0.7rem;
+    color: #FFFFFF;
+    background-color: #ED8221;
+    background-image: -webkit-gradient(linear, left top, right top, from(#ED8221), to(#e75d26)); }
+    body .button-chevron:after {
+      margin-left: 0.5rem;
+      content: '\25B6'; }
+    body .button-chevron:hover {
+      background-color: #e75d26;
+      background-image: none; }
+  body .row {
+    display: flex; }
+    body .row .col-50 {
+      flex: 1 1 50%; }
