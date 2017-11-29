@@ -1,5 +1,11 @@
 $yellow: #fdf2e2;
 $orange: #e85227;
+$form-color: #a0a0a0;
+$form-bg-color: #fbfbfb;
+$form-error-color: #e7401e;
+$form-error-bg-color: #fef4f4;
+
+$padding: 3rem;
 
 @font-face {
   font-family: 'LeasePlan';
@@ -23,8 +29,105 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'LeasePlan';
+
+  a, h1, h3{
+    color: $orange;
+  }
+
+  .container{
+    width: 960px;
+    margin: auto;
+    padding: 0 5rem;
+    .jumbo-yellow{
+      margin-top: 80px;
+      background-color: $yellow;
+      padding: 0 $padding;
+      min-height: 380px;
+      .logo{
+        height: 100px;
+        margin-top: -50px;
+        margin-left: -40px;
+      }
+      h1{
+        font-size: 37px;
+      }
+      .car{
+        margin: 80px 10px 0 0;
+        width: 500px;
+        float: right;
+      }
+    }
+    .content{
+      > .col-50{
+        padding: $padding;
+      }
+    }
+  }
+
+  form {
+    .row{
+      .col-50{
+        &:first-of-type{
+          padding-right: 1rem;
+        }
+        &:last-of-type{
+          padding-left: 1rem;
+        }
+      }
+    }
+    
+    .inputGroup{
+      margin-bottom: 1rem;
+
+      &.has-error{
+        input{
+          border: 1px solid $form-error-color;
+          background-color: $form-error-bg-color;
+          color: $form-error-color;
+        }
+      }
+
+      &.checkbox{
+        position: relative;
+        label{
+          margin-left: 30px;
+        }
+        input{
+          position: absolute;
+          top: 0px;
+          left: 0px;
+        }
+      }
+
+      label{
+        font-weight: bold;
+        font-size: 14px;
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+      input{
+        display: block;
+        width: 100%;
+        border: 1px solid $form-color;
+        background-color: $form-bg-color;
+        color: $form-color;
+        padding: 0.5rem;
+      }
+
+      .help{
+        font-size: 12px;
+        color: $form-error-color;
+      }
+    }
+  }
+
+
+  .row{
+    display: flex;
+    .col-50{
+      flex: 1 1 50%;
+    }
+  }
+
 }
 
-a, h1, h3{
-  color: $orange;
-}

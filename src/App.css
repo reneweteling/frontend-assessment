@@ -17,6 +17,63 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'LeasePlan'; }
-
-a, h1, h3 {
-  color: #e85227; }
+  body a, body h1, body h3 {
+    color: #e85227; }
+  body .container {
+    width: 960px;
+    margin: auto;
+    padding: 0 5rem; }
+    body .container .jumbo-yellow {
+      margin-top: 80px;
+      background-color: #fdf2e2;
+      padding: 0 3rem;
+      min-height: 380px; }
+      body .container .jumbo-yellow .logo {
+        height: 100px;
+        margin-top: -50px;
+        margin-left: -40px; }
+      body .container .jumbo-yellow h1 {
+        font-size: 37px; }
+      body .container .jumbo-yellow .car {
+        margin: 80px 10px 0 0;
+        width: 500px;
+        float: right; }
+    body .container .content > .col-50 {
+      padding: 3rem; }
+  body form .row .col-50:first-of-type {
+    padding-right: 1rem; }
+  body form .row .col-50:last-of-type {
+    padding-left: 1rem; }
+  body form .inputGroup {
+    margin-bottom: 1rem; }
+    body form .inputGroup.has-error input {
+      border: 1px solid #e7401e;
+      background-color: #fef4f4;
+      color: #e7401e; }
+    body form .inputGroup.checkbox {
+      position: relative; }
+      body form .inputGroup.checkbox label {
+        margin-left: 30px; }
+      body form .inputGroup.checkbox input {
+        position: absolute;
+        top: 0px;
+        left: 0px; }
+    body form .inputGroup label {
+      font-weight: bold;
+      font-size: 14px;
+      display: block;
+      margin-bottom: 0.5rem; }
+    body form .inputGroup input {
+      display: block;
+      width: 100%;
+      border: 1px solid #a0a0a0;
+      background-color: #fbfbfb;
+      color: #a0a0a0;
+      padding: 0.5rem; }
+    body form .inputGroup .help {
+      font-size: 12px;
+      color: #e7401e; }
+  body .row {
+    display: flex; }
+    body .row .col-50 {
+      flex: 1 1 50%; }
