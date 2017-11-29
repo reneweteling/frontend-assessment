@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import * as EmailValidator from 'email-validator'
-import promoCodes from '../PromoCodes'
+import promoCodes from '../promoCodes'
 
 const Input = (props) => {
   return (
